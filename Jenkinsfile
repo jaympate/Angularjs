@@ -21,9 +21,11 @@ pipeline {
         echo ('Running the application')
       }
     }
-    stage ('Lint') {
+    stage ('update') {
       steps {
-        sh 'npm lint'
+        sh 'npm update'
+        sh 'node -v'
+        sh 'npm -v'
       }
     }
     stage ('Test') {
