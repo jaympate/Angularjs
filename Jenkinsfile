@@ -15,13 +15,13 @@ pipeline {
     }
     stage('Run'){
       steps{
-        sh 'npm run'
+        sh 'npm run build'
         echo ('Running the application')
       }
     }
     stage ('Test') {
       steps {
-        sh 'npm test'
+        sh 'npm run test'
         echo ('Testing the application')
       }
     }
