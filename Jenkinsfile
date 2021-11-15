@@ -4,6 +4,8 @@ pipeline {
     stage('Config list'){
       steps {
         sh 'npm config ls'
+        sh 'node -v'
+        sh 'npm -v'
         
       }
     }
