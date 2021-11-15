@@ -23,16 +23,16 @@ pipeline {
     }
     stage ('update') {
       steps {
-        sh 'npm update'
+        sh 'npm install -g n'
         sh 'node -v'
         sh 'npm -v'
       }
     }
-    stage ('Test') {
+    /*stage ('Test') {
       steps {
         sh 'npm test'
         echo ('Testing the application')
       }
-    }
+    }*/
   }
 }
