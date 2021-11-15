@@ -6,6 +6,7 @@ pipeline {
         sh 'npm config ls'
         sh 'node -v'
         sh 'npm -v'
+        sh 'npm ls'
         
       }
     }
@@ -23,7 +24,7 @@ pipeline {
     }
     stage ('update') {
       steps {
-        sh 'npm install -g n'
+        //sh 'npm install -g n'
         sh 'node -v'
         sh 'npm -v'
       }
