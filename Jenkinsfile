@@ -21,6 +21,11 @@ pipeline {
         echo ('Running the application')
       }
     }
+    stage ('Lint') {
+      steps {
+        sh 'npm lint'
+      }
+    }
     stage ('Test') {
       steps {
         sh 'npm test'
